@@ -105,9 +105,9 @@ def check_call(*args, **kwargs):
         lines = []
         for line in proc.stdout:
             lines.append(line)
-            sys.stdout.write(line)
+            sys.stdout.write(line.decode('utf-8'))
 
-        output = "".join(lines)
+        output = "".join(list(map(lambda x: x.decode('utf-8'), lines)))
 
     else:
         # wait for the process to finish
@@ -213,7 +213,7 @@ def install_vars_plugins(target):
             |     pass
             |   def get_vars(self, loader, path, entities, cache=True):
             |     return {'ansible_python_interpreter': 'python'}
-            """, 0, re.MULTILINE))
+            """, 0, re.MULTILINE).encode('utf-8'))
 
 def update_wrapper():
     """Update the wrapper in place."""
