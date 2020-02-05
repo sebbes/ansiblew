@@ -3,6 +3,7 @@
 # -----------------------------------------------------------
 # Script originates from https://github.com/flachnetz/ansiblew
 # Was forked in order to update the ansible version
+# Also amended script to python3.
 # -----------------------------------------------------------
 
 import hashlib
