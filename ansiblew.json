@@ -1,4 +1,4 @@
 {
-  "ansible_version": "2.9.2",
+  "ansible_version": "2.9.6",
   "requirements": ["ansible-lint"]
 }
